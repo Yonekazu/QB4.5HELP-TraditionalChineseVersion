@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>QB45幫助文檔繁體中文版</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="QB45幫助文檔繁體中文版" />
+<meta name="keywords" content="QB45,幫助文檔,繁體中文版" />
+<meta name="author" content="yonekazu" />
+<link rel="stylesheet" href="../assets/QBTW.css" type="text/css" />
+<script src="../assets/QBTW.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="QBwin">
+<pre>
+<span class="menu">   F/檔案  E/編輯  V/景象  S/搜尋  R/執行  D/偵錯     O/選用功能        H/援助  </span>
+<span class="black">&#xFFAA;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;<span class="titlebox"> 援助: POKE 敘述細節 </span>&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;<span class="dialog">&#xFFA1;</span>&#xFFAB;&#xFFAC;&#xFFA6;</span>
+</pre>
+</div>
+<div class="QBhelp">
+<pre id="QBhelpContainer">
+  <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8093.html"> Quick 畫面 </a><span class="QH_2">&gt;</span>    <span class="QH_1">&lt; 細節 &gt;</span>    <span class="QH_2">&lt;</span><a href="qb45advr.hlp.L8175.html"> 範例 </a><span class="QH_2">&gt;</span>    <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8006.html"> 內容 </a><span class="QH_2">&gt;</span>    <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8007.html"> 索引 </a><span class="QH_2">&gt;</span>
+───────────────────────────────────────
+<span class="QH_1">POKE 敘述細節</span>
+
+<span class="QH_1">語法</span>
+  POKE 位址,位元組
+
+位址參數可為一個運算式的值,用來表示主記憶體的位址; 位址參數其值是介於 0
+到 65,535 之間。
+
+位元組參數可為一個運算式,表示所要寫入的資料; 其值介於 0 到 255 之間
+的整數值。
+
+位址參數是指由目前預設的節位址(Segment Address)(由 DEF SEG 敘述所設定)
+到此參數之間的位移位址(節內位址--Offset Address)值。
+
+如果參數是單或倍精確浮點數,或是長整數,將會被轉換成一個佔 2 個位元組長度的
+整數。
+
+POKE 與 PEEK 為互補函數。
+
+                          <span class="QH_1">---------  警告   ---------</span>
+    請小心使用 POKE 函數。如果用法不正確,可能會導致 BASIC 或作業系統當機。
+                          <span class="QH_1">---------------------------</span>
+</pre>
+</div>
+<div class="QBwin" style="Z-INDEX: -1;">
+<pre class="black">
+<span class="black">&#xFFA3                                                                              <span class="dialog">&#xFFA1;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+</pre>
+</div>
+<div class="QBwin">
+<pre>
+<span class="black">&#xFFA3;                                                                              <span class="dialog">&#xFFA2;</span></span>
+<span class="black">&#xFFA3;</span><span class="dialog">&#xFFA4;<span class="blackspace">&nbsp;</span>                                                                           &#xFFA8;</span><span class="black">&#xFFA3;</span>
+<span class="titlebar">&#xFFAB;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC; 未經命名 &#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;<span class="invertedcolor">&#xFFA1;</span>&#xFFAB;&#xFFAC;&#xFFA7;</span>
+<span class="titlebar">&#xFFAB;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC; 立即執行 &#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;</span>
+<span class="statusbar"> &lt;Shift+F1=援助&gt; &lt;F6=視窗&gt; &lt;ESC=S取消&gt; &lt;Ctrl+F1=下一頁&gt; &lt;Alt+F1=上一頁&gt;  |   <span id="capsStatus"> </span><span id="numStatus">N</span> </span>
+</pre>
+</div>
+</div>
+</body>
+</html>

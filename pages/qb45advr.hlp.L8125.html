@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>QB45幫助文檔繁體中文版</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="QB45幫助文檔繁體中文版" />
+<meta name="keywords" content="QB45,幫助文檔,繁體中文版" />
+<meta name="author" content="yonekazu" />
+<link rel="stylesheet" href="../assets/QBTW.css" type="text/css" />
+<script src="../assets/QBTW.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="QBwin">
+<pre>
+<span class="menu">   F/檔案  E/編輯  V/景象  S/搜尋  R/執行  D/偵錯     O/選用功能        H/援助  </span>
+<span class="black">&#xFFAA;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;<span class="titlebox"> 援助: LSET 敘述細節 </span>&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;<span class="dialog">&#xFFA1;</span>&#xFFAB;&#xFFAC;&#xFFA6;</span>
+</pre>
+</div>
+<div class="QBhelp">
+<pre id="QBhelpContainer">
+  <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8078.html">Quick 畫面</a><span class="QH_2">&gt;</span>   <span class="QH_1">&lt; 細節 &gt;</span>   <span class="QH_2">&lt;</span><a href="qb45advr.hlp.L8126.html"> 範例 </a><span class="QH_2">&gt;</span>   <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8006.html"> 內容 </a><span class="QH_2">&gt;</span>   <span class="QH_2">&lt;</span><a href="qb45qck.hlp.L8007.html"> 索引 </a><span class="QH_2">&gt;</span>
+───────────────────────────────────────
+<span class="QH_1">LSET 敘述細節</span>
+
+<span class="QH_1">語法</span>
+LSET {字串變數 = 字串運算式 | 字串運算式 1 = 字串運算式 2 }
+
+其中字串變數參數雖然可為任意的字串變數,但通常為隨機存取檔中用 FIELD 敘述
+所定義的欄位。字串運算式參數是用來指定給變數的值。
+
+若字串運算式需要的長度小於在 FIELD 敘述中對字串變數所定義的長度,當執行
+LSET 敘述時,字串會先向左邊靠齊後,再存到字串變數中(執行 RSET 敘述則字串
+會先向右靠齊),空白碼會被使用來填滿空出的位置。反之,若字串運算式的長度
+大於 FIELD 敘述所定義的資料長度,則執行 LSET 及 RSET 敘述將右邊多出的
+部份刪除,數值必須在執行 LSET 或 REST 敘述之前,先轉成字串。
+
+
+您也可以使用 LSET 或 RSET 與一個未經 FIELD 敘述定義的字串變數欄位,作向左
+對齊或向右對齊。例如,程式行
+
+  A$=SPACE$(20)
+  RSET A$=N$
+
+對含有 20 個位元組欄位的字串 N$ 作向右靠齊。此程式對格式化輸出的列印
+很有用。
+
+您可以使用 LSET 敘述來指定一個記錄變數(record variable)給其他記錄變數。
+下列範例拷貝 RecTwo 的內容給 RecOne :
+
+  TYPE TwoString
+     StrFld AS STRING * 2
+  END TYPE
+
+  TYPE ThreeString
+     StrFld AS STRING * 3
+  END TYPE
+  DIM RecOne AS TwoString, RecTwo AS ThreeString
+  .
+  .
+  .
+  LSET RecOne = RecTwo
+
+注意 LSET 可用來指定不同型態的記錄變數。相同型態的記錄變數可用 LET 來指定。
+同時因為 RecOne 僅佔 2 個位元組,所以僅從 RecTwo 拷貝二個位元組而已, LSET
+敘述僅拷貝二筆記錄變數中較短的位元組數。
+
+
+</pre>
+</div>
+<div class="QBwin" style="Z-INDEX: -1;">
+<pre class="black">
+<span class="black">&#xFFA3                                                                              <span class="dialog">&#xFFA1;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+<span class="black">&#xFFA3                                                                              <span class="dialog" data="scrollbar">&nbsp;</span></span>
+</pre>
+</div>
+<div class="QBwin">
+<pre>
+<span class="black">&#xFFA3;                                                                              <span class="dialog">&#xFFA2;</span></span>
+<span class="black">&#xFFA3;</span><span class="dialog">&#xFFA4;<span class="blackspace">&nbsp;</span>                                                                           &#xFFA8;</span><span class="black">&#xFFA3;</span>
+<span class="titlebar">&#xFFAB;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC; 未經命名 &#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;<span class="invertedcolor">&#xFFA1;</span>&#xFFAB;&#xFFAC;&#xFFA7;</span>
+<span class="titlebar">&#xFFAB;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC; 立即執行 &#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFAC;&#xFFA7;</span>
+<span class="statusbar"> &lt;Shift+F1=援助&gt; &lt;F6=視窗&gt; &lt;ESC=S取消&gt; &lt;Ctrl+F1=下一頁&gt; &lt;Alt+F1=上一頁&gt;  |   <span id="capsStatus"> </span><span id="numStatus">N</span> </span>
+</pre>
+</div>
+</div>
+</body>
+</html>

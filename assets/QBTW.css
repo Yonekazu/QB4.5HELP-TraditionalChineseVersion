@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'QB2000';
+    src: url('QB2000.woff') format('woff');
+}
+@font-face {
+    font-family: 'QBTW';
+    src: url('QBTW.woff') format('woff'); 
+}
+.font-alt :where(body, pre, code, span, div, p, a, li, button) {
+    font-family: 'QBTW', monospace !important;
+}
+.font-alt :where(
+    .titlebar, .main, .menu, .dialog, 
+    .titlebox, .invertedcolor, .statusbar,
+    .blackspace, .black, .selected,
+    .container, .QBhelp, .QBwin,
+    .cursor, .QH_1, .QH_2, .mouse
+) {
+    font-family: 'QBTW', monospace !important;
+}
+body, pre, code {
+    font-family: "QB2000", monospace;
+    font-size: 16px;
+    line-height: 18px;
+    color: #AAAAAA;
+}
+span {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #000000;
+    letter-spacing: 0;
+}
+pre, code {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:focus {
+    outline: none;
+}
+a:focus {
+    text-decoration: none;
+    background: linear-gradient(#FFFFFF, #FFFFFF) no-repeat;
+    background-position: left bottom;
+    padding-bottom: 2px;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { background-size: 8px 4px; }
+    50% { background-size: 0 0; }
+}
+a:active{
+    color: #000000;
+    background-color: #AAAAAA;
+    mix-blend-mode:multiply;
+}
+.titlebar, .main {
+    background-color: #0000AA;
+    color: #AAAAAA;
+}
+.menu, .dialog, .titlebox {
+    background-color: #AAAAAA;
+    color: #000000;
+}
+.invertedcolor {
+    background-color: #AAAAAA;
+    color: #0000AA;
+}
+.statusbar {
+    background-color: #00AAAA;
+    color: #000000;
+}
+.blackspace {
+    background-color: #000000;
+    color: #000000;
+}
+.black {
+    background-color: #000000;
+    color: #AAAAAA;
+}
+.selected {
+    background-color: #AA5500;
+    color: #000000;
+}
+
+.container {
+    position: relative;
+    width: 640px;
+    margin: 0 auto;
+}
+.QBhelp {
+    width: 624px;
+    padding: 0;
+    position: absolute;
+    left: 8px;
+    z-index: 1;
+}
+.QBwin {
+    width: 640px;
+    padding: 0;
+    position: relative;
+    user-select: none;
+}
+.titlebox {
+    user-select: text;
+}
+
+.cursor {
+    position: relative;
+    display: inline;
+}
+.cursor::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 8px;
+    height: 4px;
+    background-color: #555555;
+}
+.QH_1 {
+    color: #FFFFFF;
+}
+.QH_2 {
+    color: #00AA00;
+}
+.mouse {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: transparent;
+    mix-blend-mode: normal;
+    display: inline-block;
+    z-index: 2;
+    user-select: none;
+    cursor: none;
+}
+.mouse:hover {
+    background-color: #FFFFFF;
+    mix-blend-mode: difference;
+}
+#fontToggleBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: #AAAAAA;
+    border: 1px solid #AAAAAA;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    width: fit-content;
+    max-width: 90%;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+#fontToggleBtn:hover {
+    background-color: #AAAAAA;
+    color: #000000;
+    border: 1px solid #FFFFFF;
+}
+#fontToggleContainer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 10px;
+}
