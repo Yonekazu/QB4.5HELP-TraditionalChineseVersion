@@ -143,7 +143,7 @@ a:active{
 .mouse {
     font-family: inherit;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
     color: #FFFFFF;
     background-color: transparent;
     mix-blend-mode: normal;
@@ -151,6 +151,7 @@ a:active{
     z-index: 2;
     user-select: none;
     cursor: none;
+    padding: 0;
 }
 .mouse:hover {
     background-color: #FFFFFF;
